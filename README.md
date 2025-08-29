@@ -7,7 +7,8 @@ Repositório criado para atividades desenvolvidas na disciplina de **Linguagem d
 <details>
   <summary>Clique para expandir</summary>
 
-<img width="890" height="243" alt="image" src="https://github.com/user-attachments/assets/2a2b2251-e76d-4774-95e1-6b6fc6955330" />
+<img width="1634" height="421" alt="Captura de tela 2025-08-29 121059" src="https://github.com/user-attachments/assets/ba63f9f4-7651-4bd6-a774-abfde602883d" />
+
 
 </details>
 
