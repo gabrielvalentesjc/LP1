@@ -78,7 +78,7 @@ Link consultado: [Hair Love – YouTube](https://www.youtube.com/watch?v=kNw8V_F
 <details>
   <summary>Clique para expandir</summary>
 
-*Em Andamento*   
+[Calculadora de média](CalculadoraMedia/src)
 
 </details>
 
@@ -89,7 +89,15 @@ Link consultado: [Hair Love – YouTube](https://www.youtube.com/watch?v=kNw8V_F
 <details>
   <summary>Clique para expandir</summary>
 
-*Em Andamento*  
+[Classes da Atividade 2](Musica/src/musica)
+
+[Classes da Atividade 3 (Imagem 1)](Lampedusa/src/lampedusa)
+
+[Classes da Atividade 3 (Imagem 3)](JohnLennon/src/john)
+
+[Classes da Atividade 5](Twodots/src)
+
+[Classes da Atividade 6](HairLove/src)
 
 </details>
 
