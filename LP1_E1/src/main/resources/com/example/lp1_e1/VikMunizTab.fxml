@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="462.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lp1_e1.Controller.VikMuniz_Controller">
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+    <children>
+        <Label layoutX="246.0" layoutY="10.0" text="Lampelusa">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="263.0" layoutY="203.0" text="John">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="363.0" layoutY="75.0" />
+        <TextField fx:id="cantorNome" layoutX="48.0" layoutY="234.0" prefHeight="26.0" prefWidth="154.0" promptText="nome" />
+        <TextField fx:id="cafeOrigem" layoutX="51.0" layoutY="283.0" promptText="origem" />
+        <TextField fx:id="canecaCor" layoutX="51.0" layoutY="336.0" prefHeight="26.0" prefWidth="148.0" promptText="cor" />
+        <Label layoutX="15.0" layoutY="287.0" text="Café" />
+        <Label layoutX="11.0" layoutY="340.0" text="Caneca" />
+        <Button fx:id="criarBarcoButton" layoutX="520.0" layoutY="38.0" mnemonicParsing="false" onAction="#criarBarco" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #563dff;" text="Criar Barco " textFill="WHITE" />
+        <TextField fx:id="barcoModelo" layoutX="48.0" layoutY="38.0" prefHeight="26.0" prefWidth="154.0" promptText="modelo" />
+        <TextField fx:id="cidadeNome" layoutX="51.0" layoutY="87.0" promptText="nome" />
+        <TextField fx:id="rioNome" layoutX="51.0" layoutY="140.0" promptText="nome" />
+        <TextField fx:id="cidadeTerritorio" layoutX="207.0" layoutY="87.0" promptText="territorio" />
+        <TextField fx:id="cidadeAltitude" layoutX="361.0" layoutY="87.0" prefHeight="26.0" prefWidth="151.0" promptText="altitude" />
+        <TextField fx:id="rioExtensao" layoutX="206.0" layoutY="140.0" promptText="extensão" />
+        <Label layoutX="12.0" layoutY="42.0" text="Barco" />
+        <Label layoutX="8.0" layoutY="91.0" text="Cidade" />
+        <Label layoutX="27.0" layoutY="144.0" text="Rio" />
+        <TextField fx:id="barcoMaterial" layoutX="208.0" layoutY="38.0" prefHeight="26.0" prefWidth="146.0" promptText="material" />
+        <TextField fx:id="barcoTamanho" layoutX="358.0" layoutY="38.0" prefHeight="26.0" prefWidth="154.0" promptText="tamanho" />
+        <TextField fx:id="rioTemperatura" layoutX="358.0" layoutY="140.0" prefHeight="26.0" prefWidth="154.0" promptText="temperatura" />
+        <Button fx:id="criarRioButton" layoutX="520.0" layoutY="140.0" mnemonicParsing="false" onAction="#criarRio" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #563dff;" text="Criar Rio" textFill="WHITE" />
+        <Button fx:id="criarCidadeButton" layoutX="520.0" layoutY="87.0" mnemonicParsing="false" onAction="#criarCidade" style="-fx-background-color: #563dff;" text="Criar Cidade" textFill="WHITE" />
+        </children>
+    </AnchorPane>
+  <Button fx:id="criarCanecaButton" layoutX="522.0" layoutY="336.0" mnemonicParsing="false" onAction="#criarCaneca" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #563dff;" text="Criar Caneca" textFill="WHITE" />
+  <Button layoutX="536.0" layoutY="417.0" mnemonicParsing="false" onAction="#goBackToMain" style="-fx-background-color: #563dff;" text="Voltar" textFill="WHITE" />
+  <Button fx:id="criarCantorButton" layoutX="523.0" layoutY="236.0" mnemonicParsing="false" onAction="#criarCantor" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #563dff;" text="Criar Cantor" textFill="WHITE" />
+
+  <Button fx:id="criarCafeButton" layoutX="522.0" layoutY="284.0" mnemonicParsing="false" onAction="#criarCafe" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #563dff;" text="Criar Café" textFill="WHITE" />
+  <TextField fx:id="canecaCapacidade" layoutX="207.0" layoutY="336.0" prefHeight="26.0" prefWidth="149.0" promptText="capacidade" />
+  <TextField fx:id="cafeAroma" layoutX="207.0" layoutY="284.0" promptText="aroma" />
+  <TextField fx:id="cantorIdade" layoutX="209.0" layoutY="235.0" prefHeight="26.0" prefWidth="146.0" promptText="idade" />
+  <TextField fx:id="cantorEstilo" layoutX="363.0" layoutY="235.0" prefHeight="26.0" prefWidth="150.0" promptText="estilo" />
+  <TextField fx:id="cafeNotas" layoutX="364.0" layoutY="284.0" promptText="notas" />
+  <TextField fx:id="canecaMaterial" layoutX="363.0" layoutY="336.0" prefHeight="26.0" prefWidth="151.0" promptText="material" />
+  <Label layoutX="8.0" layoutY="240.0" text="Cantor" />
+</Pane>

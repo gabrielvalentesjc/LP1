@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="462.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lp1_e1.Controller.Doodle_Controller">
+
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <children>
+            <Label layoutX="276.0" layoutY="14.0" text="Animal">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <TextField fx:id="animalEspecie" layoutX="57.0" layoutY="66.0" promptText="especie" />
+            <TextField fx:id="animalIdade" layoutX="230.0" layoutY="66.0" promptText="idade" />
+            <TextField fx:id="animalPeso" layoutX="405.0" layoutY="66.0" promptText="peso" />
+            <TextField fx:id="casaEndereco" layoutX="49.0" layoutY="183.0" promptText="endereco" />
+            <TextField fx:id="casaCor" layoutX="230.0" layoutY="183.0" promptText="cor" />
+            <TextField fx:id="casaTamanho" layoutX="405.0" layoutY="183.0" promptText="tamanho" />
+            <TextField fx:id="veiculoNome" layoutX="52.0" layoutY="300.0" promptText="nome" />
+            <TextField fx:id="veiculoCategoria" layoutX="232.0" layoutY="300.0" promptText="categoria" />
+            <TextField fx:id="veiculoMarca" layoutX="405.0" layoutY="300.0" promptText="marca" />
+            <Label layoutX="286.0" layoutY="141.0" text="Casa">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="265.0" text="Veiculo">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="208.0" />
+            <Label layoutX="295.0" layoutY="326.0" />
+        </children>
+    </AnchorPane>
+      <Button layoutX="524.0" layoutY="409.0" mnemonicParsing="false" onAction="#goBackToMain" style="-fx-background-color: #563dff;" text="Voltar" textFill="WHITE" />
+      <Button fx:id="criarAnimalButton" layoutX="265.0" layoutY="109.0" mnemonicParsing="false" onAction="#criarAnimal" style="-fx-background-color: #563dff;" text="Criar Animal" textFill="WHITE" />
+      <Button fx:id="criarCasaButton" layoutX="271.0" layoutY="231.0" mnemonicParsing="false" onAction="#criarCasa" style="-fx-background-color: #563dff;" text="Criar Casa" textFill="WHITE" />
+      <Button fx:id="criarVeiculoButton" layoutX="264.0" layoutY="348.0" mnemonicParsing="false" onAction="#criarVeiculo" style="-fx-background-color: #563dff;" text="Criar Veiculo" textFill="WHITE" />
+</Pane>

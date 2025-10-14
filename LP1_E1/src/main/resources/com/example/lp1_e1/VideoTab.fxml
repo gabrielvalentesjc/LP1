@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="462.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lp1_e1.Controller.Video_Controller">
+
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <children>
+            <Label layoutX="280.0" layoutY="14.0" text="Filha">
+                <font>
+                    <Font size="18.0" />
+                </font></Label>
+            <Label layoutX="289.0" layoutY="141.0" text="Pai">
+                <font>
+                    <Font size="18.0" />
+                </font></Label>
+            <Label layoutX="250.0" layoutY="258.0" text="TutorialVideo">
+                <font>
+                    <Font size="18.0" />
+                </font></Label>
+            <TextField fx:id="filhaNome" layoutX="53.0" layoutY="59.0" promptText="nome" />
+            <TextField fx:id="filhaNivelSatisfacao" layoutX="230.0" layoutY="59.0" promptText="nivelSatisvacao" />
+            <TextField fx:id="filhaHumor" layoutX="400.0" layoutY="59.0" promptText="humor" />
+            <TextField fx:id="paiNome" layoutX="57.0" layoutY="181.0" promptText="nome" />
+            <TextField fx:id="paiNivelHabilidadePentear" layoutX="234.0" layoutY="181.0" promptText="nivel habilidade de pentear" />
+            <TextField fx:id="paiEmocao" layoutX="404.0" layoutY="181.0" promptText="emocao" />
+            <TextField fx:id="tutorialVideoTitulo" layoutX="60.0" layoutY="295.0" promptText="titulo" />
+            <TextField fx:id="tutorialVideoDuracao" layoutX="237.0" layoutY="295.0" promptText="duracao" />
+            <TextField fx:id="tutorialVideoAutor" layoutX="407.0" layoutY="295.0" promptText="autor" />
+        </children>
+    </AnchorPane>
+      <Button layoutX="524.0" layoutY="408.0" mnemonicParsing="false" onAction="#goBackToMain" style="-fx-background-color: #563dff;" text="Voltar" textFill="WHITE" />
+      <Button fx:id="criarTutorialButton" layoutX="263.0" layoutY="336.0" mnemonicParsing="false" onAction="#criarTutorialVideo" style="-fx-background-color: #563dff;" text="Criar Tutorial" textFill="WHITE" />
+      <Button fx:id="criarPaiButton" layoutX="275.0" layoutY="219.0" mnemonicParsing="false" onAction="#criarPai" style="-fx-background-color: #563dff;" text="Criar Pai" textFill="WHITE" />
+      <Button fx:id="criarFilhaButton" layoutX="271.0" layoutY="97.0" mnemonicParsing="false" onAction="#criarFilha" style="-fx-background-color: #563dff;" text="Criar filha" textFill="WHITE" />
+</Pane>
