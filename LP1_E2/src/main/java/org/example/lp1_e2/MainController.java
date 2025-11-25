@@ -10,9 +10,11 @@ import java.io.IOException;
 
 public class MainController {
 
+    // Modifique este método:
     @FXML
     private void goToMusica(ActionEvent event) throws IOException {
-        loadScene("MusicaTab.fxml", event);
+        // Mudou de MusicaTab.fxml para MusicaMain.fxml
+        loadScene("MusicaMain.fxml", event);
     }
 
     @FXML
@@ -37,5 +39,6 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+
 }
 

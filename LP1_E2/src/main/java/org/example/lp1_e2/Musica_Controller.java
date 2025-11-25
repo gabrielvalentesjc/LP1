@@ -17,14 +17,17 @@ import java.io.IOException;
 
 public class Musica_Controller {
     // ... (Seus campos @FXML continuam iguais) ...
+    @FXML private TextField pessoaId;
     @FXML private TextField pessoaNome;
     @FXML private TextField pessoaHumor;
     @FXML private TextField pessoaObjetivo;
 
+    @FXML private TextField solId;
     @FXML private TextField solIntensidade;
     @FXML private TextField solPosicao;
     @FXML private TextField solTemperatura;
 
+    @FXML private TextField diaId;
     @FXML private TextField diaPeriodo;
     @FXML private TextField diaClima;
     @FXML private TextField diaEvento;
@@ -102,7 +105,7 @@ public class Musica_Controller {
         Dia novoDia = new Dia(periodo, clima, evento);
 
         try {
-            musicaDAO.salvarDia(novoDia);
+            musicaDAO.salvarDia(novoDia); //
             showSuccess("Sucesso", "Dia salvo no Banco de Dados!");
 
             diaPeriodo.clear();
@@ -123,5 +126,97 @@ public class Musica_Controller {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private void deletarPessoa() {
+        try {
+            int id = Integer.parseInt(pessoaId.getText());
+            musicaDAO.deletarPessoa(id);
+            showSuccess("Sucesso", "Pessoa deletada!");
+            pessoaId.clear();
+        } catch (NumberFormatException e) {
+            showAlert("Erro", "Digite um ID válido para deletar.");
+        }
+    }
+
+    @FXML
+    private void atualizarPessoa() {
+        try {
+            int id = Integer.parseInt(pessoaId.getText());
+
+            // Cria objeto com os dados novos dos campos de texto
+            Pessoa p = new Pessoa(pessoaNome.getText(), pessoaHumor.getText(), pessoaObjetivo.getText());
+            p.setId(id); // Define qual ID será alterado
+
+            musicaDAO.atualizarPessoa(p);
+            showSuccess("Sucesso", "Dados atualizados!");
+
+        } catch (Exception e) {
+            showAlert("Erro", "Falha ao atualizar.");
+        }
+    }
+
+    @FXML
+    private void atualizarSol() {
+        try {
+            int id = Integer.parseInt(solId.getText());
+            Sol s = new Sol(solIntensidade.getText(), solPosicao.getText(), solTemperatura.getText());
+            s.setId(id);
+            musicaDAO.atualizarSol(s); // Certifique-se que esse método existe no DAO
+            showSuccess("Sucesso", "Sol atualizado!");
+        } catch (Exception e) {
+            showAlert("Erro", "Erro ao atualizar Sol.");
+        }
+    }
+
+    @FXML
+    private void deletarSol() {
+        try {
+            int id = Integer.parseInt(solId.getText());
+            musicaDAO.deletarSol(id); // Certifique-se que esse método existe no DAO
+            showSuccess("Sucesso", "Sol deletado!");
+            solId.clear();
+        } catch (Exception e) {
+            showAlert("Erro", "Erro ao deletar Sol.");
+        }
+    }
+
+    @FXML
+    private void deletarDia() {
+        try {
+            int id = Integer.parseInt(diaId.getText());
+            musicaDAO.deletarDia(id);
+            showSuccess("Sucesso", "Dia deletado!");
+            diaId.clear();
+        } catch (NumberFormatException e) {
+            showAlert("Erro", "Digite um ID válido para deletar.");
+        } catch (Exception e) {
+            showAlert("Erro", "Erro ao deletar Dia: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void atualizarDia() {
+        try {
+            int id = Integer.parseInt(diaId.getText());
+
+            // 1. Cria o objeto com os novos dados dos campos de texto
+            Dia diaAtualizado = new Dia(diaPeriodo.getText(), diaClima.getText(), diaEvento.getText());
+
+            // 2. Define o ID para que o banco saiba qual registro alterar
+            diaAtualizado.setId(id);
+
+            // 3. Chama o DAO
+            musicaDAO.atualizarDia(diaAtualizado);
+
+            showSuccess("Sucesso", "Dia atualizado com sucesso!");
+
+        } catch (NumberFormatException e) {
+            showAlert("Erro", "Digite um ID válido para atualizar.");
+        } catch (Exception e) {
+            showAlert("Erro", "Erro ao atualizar Dia: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

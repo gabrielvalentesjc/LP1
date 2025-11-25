@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="462.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lp1_e2.CrudSolController">
+    <Label layoutX="14.0" layoutY="14.0" text="Gerenciar Sol"> <font><Font size="20.0" /></font> </Label>
+
+    <TableView fx:id="tabelaSol" layoutX="14.0" layoutY="50.0" prefHeight="350.0" prefWidth="350.0">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="colIntensidade" prefWidth="100.0" text="Intensidade" />
+            <TableColumn fx:id="colPosicao" prefWidth="100.0" text="Posição" />
+            <TableColumn fx:id="colTemperatura" prefWidth="100.0" text="Temperatura" />
+        </columns>
+    </TableView>
+
+    <VBox layoutX="380.0" layoutY="50.0" spacing="10.0">
+        <Label text="ID:" /> <TextField fx:id="tfId" disable="true" promptText="Automático" />
+        <Label text="Intensidade:" /> <TextField fx:id="tfIntensidade" />
+        <Label text="Posição:" /> <TextField fx:id="tfPosicao" />
+        <Label text="Temperatura:" /> <TextField fx:id="tfTemperatura" />
+
+        <Button onAction="#salvar" prefWidth="200" style="-fx-background-color: #4CAF50;" text="Salvar (Novo)" textFill="WHITE" />
+        <Button onAction="#atualizar" prefWidth="200" style="-fx-background-color: #FF9800;" text="Atualizar" textFill="WHITE" />
+        <Button onAction="#deletar" prefWidth="200" style="-fx-background-color: #F44336;" text="Deletar" textFill="WHITE" />
+        <Button onAction="#limparCampos" prefWidth="200" text="Limpar" />
+    </VBox>
+    <Button layoutX="14.0" layoutY="414.0" onAction="#voltar" text="Voltar" />
+</AnchorPane>

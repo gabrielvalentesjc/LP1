@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="462.0" prefWidth="610.0" spacing="20.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lp1_e2.MusicaMainController">
+
+    <Label text="Menu Música">
+        <font><Font size="24.0" /></font>
+    </Label>
+
+    <Separator prefWidth="200.0" />
+
+    <Label text="Selecione o que deseja gerenciar:" />
+
+    <Button onAction="#abrirCrudPessoa" prefHeight="40" prefWidth="200" style="-fx-background-color: #563dff; -fx-background-radius: 10px;" text="Gerenciar Pessoas" textFill="WHITE" />
+    <Button onAction="#abrirCrudSol" prefHeight="40" prefWidth="200" style="-fx-background-color: #563dff; -fx-background-radius: 10px;" text="Gerenciar Sol" textFill="WHITE" />
+    <Button onAction="#abrirCrudDia" prefHeight="40" prefWidth="200" style="-fx-background-color: #563dff; -fx-background-radius: 10px;" text="Gerenciar Dia" textFill="WHITE" />
+
+    <Button onAction="#voltarParaMain" style="-fx-background-color: #cccccc; -fx-background-radius: 10px;" text="Voltar ao Menu Principal" />
+</VBox>
